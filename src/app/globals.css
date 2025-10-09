@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Press+Start+2P&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Press+Start+2P&family=VT323&family=Share+Tech+Mono&display=swap');
 
 
 @theme inline {
@@ -7,6 +7,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-share-tech-mono: var(--font-share-tech-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,13 +29,37 @@ body {
   text-shadow: 0 0 1px rgba(68, 174, 240, 0.5),0 0 20px rgba(68, 176, 244, 0.5);
 }
 .glow3 {
-  text-shadow: 0 0 1px #ffd700, 0 0 20px #ffd700;
+  text-shadow: 0 0 1px #00ff4887, 0 0 20px #00ff59a8;
+}
+.glow32 {
+  text-shadow: 0 0 1px #00ff04bc, 0 0 20px #00ff2fa1;
+}
+
+.glow3-img {
+  filter: drop-shadow(0 0 2px #e4cb3a98) drop-shadow(0 0 20px #ffd9006f);
+}
+.glow4-img {
+  filter: drop-shadow(0 0 0.4px #819dd5ec) drop-shadow(0 0 15px #7eb1e5b2);
+}
+.glow-blue-img {
+  filter: drop-shadow(0 0 2px #97b4e3) drop-shadow(0 0 20px #a5c5ec);
+}
+.glow1-blue-img {
+  filter: drop-shadow(0 0 2px #3d7ee7) drop-shadow(0 0 20px #2e7ede);
+}
+
+.glow-purple-img {
+  filter: drop-shadow(0 0 1px #8a5cf65f) drop-shadow(0 0 20px #a78bfa74);
 }
 .glow4 {
   text-shadow: 0 0 1px #cfd5e1, 0 0 20px #dfe4ec;
 }
 .glow5 {
   text-shadow: 0 0 1px #d8dce7, 0 0 20px #e7e9ec;
+}
+
+.font-share-tech-mono {
+  font-family: 'Share Tech Mono', monospace;
 }
 
 .hr-glow {
@@ -45,7 +70,9 @@ body {
   margin-top: 0.5rem;  /* optional */
   margin-bottom: 2.5rem;
 }
-
+.font-courier{
+  font-family:'Courier New', Courier, monospace;
+}
 .font-press-start {
   font-family: 'Press Start 2P', monospace;
 }
@@ -102,10 +129,50 @@ body {
   }
 }
 
+/* Subtle VHS overlay effect */
+.vhs-overlay {
+  position: relative;
+}
+
+.vhs-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: 
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.02) 0px,
+      rgba(255, 255, 255, 0.02) 1px,
+      transparent 2px,
+      transparent 4px
+    );
+  mix-blend-mode: screen;
+  animation: vhs-scan 8s linear infinite;
+}
+
+.vhs-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: 
+    radial-gradient(ellipse at center, transparent 60%, rgba(0,0,0,0.1) 100%);
+  animation: vhs-flicker 6s ease-in-out infinite;
+}
+
+@keyframes vhs-scan {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(8px); }
+}
+
+@keyframes vhs-flicker {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
 /* Safety neutralizer in case any remnants remain */
-.vhs-overlay,
-.vhs-overlay::before,
-.vhs-overlay::after,
+.vhs-overlay-old,
 .vhs-overlay-local,
 .vhs-overlay-local::before,
 .vhs-overlay-local::after,
