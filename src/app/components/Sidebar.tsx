@@ -13,7 +13,8 @@ export default function Sidebar() {
         backgroundRepeat:"no-repeat",    
       }}
     >
-      <h2 className="text-4xl text-blue-100 font-bold  p-4 ml-4 mt-2 mb-10 font-press-start">
+      <h2 className="text-4xl text-teal-400 glow4 font-roboto-mono p-4 ml-4 mt-2 mb-10 font-press-start">
+        #:
         
      
       </h2>
@@ -24,7 +25,7 @@ export default function Sidebar() {
           <Link key={topic.path} 
           href={topic.path} 
           className="w-full  hover:bg-white/50  transition px-6 py-2 rounded
-           glow4 text-teal-500 text-xl font-roboto-mono p-4 bg-black/5">
+           glow4 text-teal-400 text-xl font-roboto-mono p-4 bg-black/5">
             
             {topic.name}
           </Link> 

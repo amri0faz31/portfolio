@@ -92,68 +92,50 @@ export default function HomePage() {
                     className="absolute inset-0"
                     style={{
                       backgroundImage:
-                        "linear-gradient(rgba(14, 14, 14, 0.5), rgba(0, 0, 0, 0.4))",
+                        "linear-gradient(rgba(14, 14, 14, 0.22), rgba(0, 0, 0, 0.4))",
                     }}
                   />
-                  <div className="relative min-h-64 sm:min-h-72 md:min-h-80 p-6 sm:p-8 md:p-12">
-                    <h2 className="text-green-600 glow3 font-roboto-mono text-xl md:text-2xl font-bold mt-2 sm:mt-3">
+                  <div className="relative min-h-64 sm:min-h-72 md:min-h-80 p-4 sm:p-6 md:p-8">
+                    <h2 className="text-green-600 glow3 font-roboto-mono text-xl md:text-2xl font-bold mt-0 sm:mt-1 ">
                       Projects section (coming soon)
                     </h2>
-                    <p className="text-slate-300/80 text-sm mt-1">Temporary rectangles below to test vertical expansion.</p>
+                    
 
                     {/* Left-to-right rectangles that wrap and grow the section vertically */}
-                    <div className="mt-8 sm:mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                      <div className="h-28 sm:h-32 md:h-36 lg:h-40 rounded-md  shadow-inner p-3"> 
-                        <span className="text-xs text-green-500 glow3">Card 1</span>
+                    <div className="mt-23 sm:mt-25 md:mt-27 grid grid-cols-1 gap-15">
+          <div className="w-full h-44 sm:h-52 md:h-60 lg:h-64 rounded-md border-2 border-black bg-black/80 shadow-inner p-3"> 
+                        <div className="flex h-full gap-4">
+                          {/* Left column: image on top + extra container below */}
+                          
+                            <div className="relative overflow-hidden border-3 border-black/20 rounded h-32 sm:h-36 md:h-40 lg:h-44 self-center">
+                              <img
+                                src="/p11.jpeg"
+                                alt="Project 1 thumbnail"
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
+                         
+
+                          {/* Right column: description aligned from top to bottom */}
+                          <div className="flex-1 h-full flex flex-col justify-start items-start">
+                            <h3 className="text-sm sm:text-base font-semibold text-green-500 glow3">Project 1</h3>
+                            <p className="mt-1 text-sm sm:text-sm text-green-500 glow3 leading-snug">
+                              Brief description of the project goes here. Highlight the tech stack and a
+                              one-line value proposition.
+                            </p>
+                          </div>
+                        </div>
                       </div>
-                      <div className="h-28 sm:h-32 md:h-36 lg:h-40 rounded-md   shadow-inner p-3"> 
+                      <div className="w-full h-28 sm:h-32 md:h-36 lg:h-40 rounded-md border border-white/10 bg-black/40 shadow-inner p-3"> 
                         <span className="text-xs text-slate-300">Card 2</span>
                       </div>
-                      <div className="h-28 sm:h-32 md:h-36 lg:h-40 rounded-md border border-white/10 bg-black/40 shadow-inner p-3"> 
+                      <div className="w-full h-28 sm:h-32 md:h-36 lg:h-40 rounded-md border border-white/10 bg-black/40 shadow-inner p-3"> 
                         <span className="text-xs text-slate-300">Card 3</span>
                       </div>
-                      <div className="h-28 sm:h-32 md:h-36 lg:h-40 rounded-md border border-white/10 bg-black/40 shadow-inner p-3"> 
+                      <div className="w-full h-28 sm:h-32 md:h-36 lg:h-40 rounded-md border border-white/10 bg-black/40 shadow-inner p-3"> 
                         <span className="text-xs text-slate-300">Card 4</span>
                       </div>
-                      <div className="h-28 sm:h-32 md:h-36 lg:h-40 rounded-md border border-white/10 bg-black/40 shadow-inner p-3"> 
-                        <span className="text-xs text-slate-300">Card 5</span>
-                      </div>
-                      <div className="h-28 sm:h-32 md:h-36 lg:h-40 rounded-md border border-white/10 bg-black/40 shadow-inner p-3"> 
-                        <span className="text-xs text-slate-300">Card 6</span>
-                      </div>
-                      <div className="h-28 sm:h-32 md:h-36 lg:h-40 rounded-md border border-white/10 bg-black/40 shadow-inner p-3"> 
-                        <span className="text-xs text-slate-300">Card 7</span>
-                      </div>
-                      <div className="h-28 sm:h-32 md:h-36 lg:h-40 rounded-md border border-white/10 bg-black/40 shadow-inner p-3"> 
-                        <span className="text-xs text-slate-300">Card 8</span>
-                      </div>
-                       <div className="h-28 sm:h-32 md:h-36 lg:h-40 rounded-md border border-white/10 bg-black/40 shadow-inner p-3"> 
-                        <span className="text-xs text-slate-300">Card 6</span>
-                      </div>
-                      <div className="h-28 sm:h-32 md:h-36 lg:h-40 rounded-md border border-white/10 bg-black/40 shadow-inner p-3"> 
-                        <span className="text-xs text-slate-300">Card 7</span>
-                      </div>
-                      <div className="h-28 sm:h-32 md:h-36 lg:h-40 rounded-md border border-white/10 bg-black/40 shadow-inner p-3"> 
-                        <span className="text-xs text-slate-300">Card 8</span>
-                      </div>
-                       <div className="h-28 sm:h-32 md:h-36 lg:h-40 rounded-md border border-white/10 bg-black/40 shadow-inner p-3"> 
-                        <span className="text-xs text-slate-300">Card 6</span>
-                      </div>
-                      <div className="h-28 sm:h-32 md:h-36 lg:h-40 rounded-md border border-white/10 bg-black/40 shadow-inner p-3"> 
-                        <span className="text-xs text-slate-300">Card 7</span>
-                      </div>
-                      <div className="h-28 sm:h-32 md:h-36 lg:h-40 rounded-md border border-white/10 bg-black/40 shadow-inner p-3"> 
-                        <span className="text-xs text-slate-300">Card 8</span>
-                      </div>
-                       <div className="h-28 sm:h-32 md:h-36 lg:h-40 rounded-md border border-white/10 bg-black/40 shadow-inner p-3"> 
-                        <span className="text-xs text-slate-300">Card 6</span>
-                      </div>
-                      <div className="h-28 sm:h-32 md:h-36 lg:h-40 rounded-md border border-white/10 bg-black/40 shadow-inner p-3"> 
-                        <span className="text-xs text-slate-300">Card 7</span>
-                      </div>
-                      <div className="h-28 sm:h-32 md:h-36 lg:h-40 rounded-md border border-white/10 bg-black/40 shadow-inner p-3"> 
-                        <span className="text-xs text-slate-300">Card 8</span>
-                      </div>
+                     
                       
                        
                     </div>
